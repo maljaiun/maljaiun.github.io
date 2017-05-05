@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Multiple Targets common files in Xcode 8 | Hexo</title>
+  <title>zsh | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天正式开始了SiuNimTao的开发，考虑将 iOS/macOS 合为一个工程项目，用到了多target，问题来了，我新建一个类时，默认的只加到了首次见的macOS target下，iOS Target则需要手动在target-&amp;gt;buile phase-&amp;gt;Complie Sources中增加才可以编译通过，目前想到的还有在另一个项目中实现公共部分，一次Adding Files加入这个">
+  <meta name="description" content="zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。123456789101112131415161718vim ~/.zshrc$ #配置别名，例如：$ alias cls=&amp;quot;clear&amp;quot;$ alias ll=&amp;quot;ls -l&amp;quot;$ alias vi=&amp;quot;vim&amp;quot;$ #配置主题$ #在.zshrc里找到ZSH_THEME$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Multiple Targets common files in Xcode 8">
-<meta property="og:url" content="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/index.html">
+<meta property="og:title" content="zsh">
+<meta property="og:url" content="http://yoursite.com/2017/05/05/zsh/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="今天正式开始了SiuNimTao的开发，考虑将 iOS/macOS 合为一个工程项目，用到了多target，问题来了，我新建一个类时，默认的只加到了首次见的macOS target下，iOS Target则需要手动在target-&amp;gt;buile phase-&amp;gt;Complie Sources中增加才可以编译通过，目前想到的还有在另一个项目中实现公共部分，一次Adding Files加入这个">
-<meta property="og:updated_time" content="2017-05-05T13:18:27.000Z">
+<meta property="og:description" content="zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。123456789101112131415161718vim ~/.zshrc$ #配置别名，例如：$ alias cls=&amp;quot;clear&amp;quot;$ alias ll=&amp;quot;ls -l&amp;quot;$ alias vi=&amp;quot;vim&amp;quot;$ #配置主题$ #在.zshrc里找到ZSH_THEME$">
+<meta property="og:updated_time" content="2017-05-05T13:26:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Multiple Targets common files in Xcode 8">
-<meta name="twitter:description" content="今天正式开始了SiuNimTao的开发，考虑将 iOS/macOS 合为一个工程项目，用到了多target，问题来了，我新建一个类时，默认的只加到了首次见的macOS target下，iOS Target则需要手动在target-&amp;gt;buile phase-&amp;gt;Complie Sources中增加才可以编译通过，目前想到的还有在另一个项目中实现公共部分，一次Adding Files加入这个">
+<meta name="twitter:title" content="zsh">
+<meta name="twitter:description" content="zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。123456789101112131415161718vim ~/.zshrc$ #配置别名，例如：$ alias cls=&amp;quot;clear&amp;quot;$ alias ll=&amp;quot;ls -l&amp;quot;$ alias vi=&amp;quot;vim&amp;quot;$ #配置主题$ #在.zshrc里找到ZSH_THEME$">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,10 +63,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Multiple-Targets-common-files-in-Xcode-8" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-zsh" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" class="article-date">
-  <time datetime="2017-05-05T13:05:16.000Z" itemprop="datePublished">2017-05-05</time>
+    <a href="/2017/05/05/zsh/" class="article-date">
+  <time datetime="2017-05-05T13:24:36.000Z" itemprop="datePublished">2017-05-05</time>
 </a>
     
   </div>
@@ -77,7 +77,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Multiple Targets common files in Xcode 8
+      zsh
     </h1>
   
 
@@ -85,12 +85,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天正式开始了SiuNimTao的开发，考虑将 iOS/macOS 合为一个工程项目，用到了多target，问题来了，我新建一个类时，默认的只加到了首次见的macOS target下，iOS Target则需要手动在target-&gt;buile phase-&gt;Complie Sources中增加才可以编译通过，目前想到的还有在另一个项目中实现公共部分，一次Adding Files加入这个SiuNimTao项目，选中两个Targets即可，其中还有一个过时的Xcode plugin ，有空研究一下。<a href="http://stackoverflow.com/questions/34056717/adding-files-and-select-multiple-targets-in-xcode" target="_blank" rel="external">http://stackoverflow.com/questions/34056717/adding-files-and-select-multiple-targets-in-xcode</a></p>
+        <p>zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">vim ~/.zshrc</div><div class="line"></div><div class="line"></div><div class="line">$ #配置别名，例如：</div><div class="line"></div><div class="line">$ alias cls=&quot;clear&quot;</div><div class="line"></div><div class="line">$ alias ll=&quot;ls -l&quot;</div><div class="line"></div><div class="line">$ alias vi=&quot;vim&quot;</div><div class="line"></div><div class="line">$ #配置主题</div><div class="line"></div><div class="line">$ #在.zshrc里找到ZSH_THEME</div><div class="line"></div><div class="line">$ #将默认的ZSH_THEME=&quot;robbyrussell&quot;修改为</div><div class="line"></div><div class="line">$ ZSH_THEME=&quot;agnoster&quot;</div></pre></td></tr></table></figure></p>
+<p>修改完配置文件最为关键的一步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ~/.zshrc #每次修改完了.zshrc文件,必须执行这个命令</div></pre></td></tr></table></figure></p>
+<p>参考:<a href="http://www.jianshu.com/p/e45160d0ae27" target="_blank" rel="external">http://www.jianshu.com/p/e45160d0ae27</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cj2bvk6a30000n9t69ybqk7rp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cj2bvk6aa0002n9t6xvki95w4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,19 +101,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/05/zsh/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          zsh
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Multiple Targets common files in Xcode 8</div>
     </a>
   
 </nav>
