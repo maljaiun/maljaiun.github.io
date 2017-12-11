@@ -83,13 +83,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="docker-learn-part-2-Containers"><a href="#docker-learn-part-2-Containers" class="headerlink" title="docker learn part 2 Containers"></a>docker learn part 2 Containers</h2><hr>
+        <h1 id="Docker-Get-Started"><a href="#Docker-Get-Started" class="headerlink" title="Docker|Get Started"></a><a href="https://docs.docker.com/get-started" target="_blank" rel="external">Docker|Get Started</a></h1><h2 id="docker-learn-part-2-Containers"><a href="#docker-learn-part-2-Containers" class="headerlink" title="docker learn part 2 Containers"></a>docker learn part 2 Containers</h2><hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">docker build -t friendlyname .  # Create image using this directory&apos;s Dockerfile</div><div class="line">docker run -p 4000:80 friendlyname  # Run &quot;friendlyname&quot; mapping port 4000 to 80</div><div class="line">docker run -d -p 4000:80 friendlyname         # Same thing, but in detached mode</div><div class="line">docker container ls                                # List all running containers</div><div class="line">docker container ls -a             # List all containers, even those not running</div><div class="line">docker container stop &lt;hash&gt;           # Gracefully stop the specified container</div><div class="line">docker container kill &lt;hash&gt;         # Force shutdown of the specified container</div><div class="line">docker container rm &lt;hash&gt;        # Remove specified container from this machine</div><div class="line">docker container rm $(docker container ls -a -q)         # Remove all containers</div><div class="line">docker image ls -a                             # List all images on this machine</div><div class="line">docker image rm &lt;image id&gt;            # Remove specified image from this machine</div><div class="line">docker image rm $(docker image ls -a -q)   # Remove all images from this machine</div><div class="line">docker login             # Log in this CLI session using your Docker credentials</div><div class="line">docker tag &lt;image&gt; username/repository:tag  # Tag &lt;image&gt; for upload to registry</div><div class="line">docker push username/repository:tag            # Upload tagged image to registry</div><div class="line">docker run username/repository:tag                   # Run image from a registry</div></pre></td></tr></table></figure>
 <h2 id="docker-learn-part3-Services"><a href="#docker-learn-part3-Services" class="headerlink" title="docker learn part3 Services"></a>docker learn part3 Services</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">docker stack ls                                            # List stacks or apps</div><div class="line">docker stack deploy -c &lt;composefile&gt; &lt;appname&gt;  # Run the specified Compose file</div><div class="line">docker service ls                 # List running services associated with an app</div><div class="line">docker service ps &lt;service&gt;                  # List tasks associated with an app</div><div class="line">docker inspect &lt;task or container&gt;                   # Inspect task or container</div><div class="line">docker container ls -q                                      # List container IDs</div><div class="line">docker stack rm &lt;appname&gt;                             # Tear down an application</div><div class="line">docker swarm leave --force      # Take down a single node swarm from the manager</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/11/Docker/" data-id="cjb1w7n1x0001sf11czv8o9k9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/11/Docker/" data-id="cjb1wdeea0003uu115ecvwgk6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/07/Blender-Tutorial/" data-id="cjb1w7n210003sf11gchsvp7c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/07/Blender-Tutorial/" data-id="cjb1wdee90002uu117aro9ys1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/05/ARKit/" data-id="cjb1w7n1s0000sf114kru1a4c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/05/ARKit/" data-id="cjb1wdee10000uu118dmfrl7d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/04/Unread-books/" data-id="cjb1w7n260007sf11xxeoldau" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/04/Unread-books/" data-id="cjb1wdeeh0007uu11ar4d3shp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -255,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/03/About-Shadowsocks/" data-id="cjb1w7n1z0002sf114tdl5o5d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/03/About-Shadowsocks/" data-id="cjb1wdee60001uu11lq7ae824" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,7 +291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/酸酸乳-没有乳/" data-id="cjb1w7n2g000bsf11qgzggbiw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/06/酸酸乳-没有乳/" data-id="cjb1wdeeq000buu113aw7sjag" class="article-share-link">Share</a>
       
       
     </footer>
@@ -333,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/11/Shareing-code-between-iOS-and-OS-X/" data-id="cjb1w7n260006sf11m4ebqi88" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/11/Shareing-code-between-iOS-and-OS-X/" data-id="cjb1wdeef0006uu11jnnz0tac" class="article-share-link">Share</a>
       
       
     </footer>
@@ -369,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/09/hello-mp/" data-id="cjb1w7n2c0008sf11do0salm7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/09/hello-mp/" data-id="cjb1wdeem0008uu11bsr893eg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -405,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/06/Paul-Swift-lesssons-calculator/" data-id="cjb1w7n230005sf11hlw3obc8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/06/Paul-Swift-lesssons-calculator/" data-id="cjb1wdeed0005uu1180boomv5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -444,7 +444,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cjb1w7n2f000asf11zyx2da0n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cjb1wdeep000auu115u2gq6ft" class="article-share-link">Share</a>
       
       
     </footer>

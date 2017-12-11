@@ -5,19 +5,19 @@
   
   <title>Docker | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="docker learn part 2 Containers
-12345678910111213141516docker build -t friendlyname .  # Create image using this directory&amp;apos;s Dockerfiledocker run -p 4000:80 friendlyname  # Run &amp;quot;friendlyname&amp;">
+  <meta name="description" content="Docker|Get Starteddocker learn part 2 Containers
+12345678910111213141516docker build -t friendlyname .  # Create image using this directory&amp;apos;s Dockerfiledocker run -p 4000:80 friendlyname  # Run &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker">
 <meta property="og:url" content="http://yoursite.com/2017/12/11/Docker/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="docker learn part 2 Containers
-12345678910111213141516docker build -t friendlyname .  # Create image using this directory&amp;apos;s Dockerfiledocker run -p 4000:80 friendlyname  # Run &amp;quot;friendlyname&amp;">
-<meta property="og:updated_time" content="2017-12-11T07:47:23.000Z">
+<meta property="og:description" content="Docker|Get Starteddocker learn part 2 Containers
+12345678910111213141516docker build -t friendlyname .  # Create image using this directory&amp;apos;s Dockerfiledocker run -p 4000:80 friendlyname  # Run &amp;">
+<meta property="og:updated_time" content="2017-12-11T07:49:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker">
-<meta name="twitter:description" content="docker learn part 2 Containers
-12345678910111213141516docker build -t friendlyname .  # Create image using this directory&amp;apos;s Dockerfiledocker run -p 4000:80 friendlyname  # Run &amp;quot;friendlyname&amp;">
+<meta name="twitter:description" content="Docker|Get Starteddocker learn part 2 Containers
+12345678910111213141516docker build -t friendlyname .  # Create image using this directory&amp;apos;s Dockerfiledocker run -p 4000:80 friendlyname  # Run &amp;">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -88,13 +88,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="docker-learn-part-2-Containers"><a href="#docker-learn-part-2-Containers" class="headerlink" title="docker learn part 2 Containers"></a>docker learn part 2 Containers</h2><hr>
+        <h1 id="Docker-Get-Started"><a href="#Docker-Get-Started" class="headerlink" title="Docker|Get Started"></a><a href="https://docs.docker.com/get-started" target="_blank" rel="external">Docker|Get Started</a></h1><h2 id="docker-learn-part-2-Containers"><a href="#docker-learn-part-2-Containers" class="headerlink" title="docker learn part 2 Containers"></a>docker learn part 2 Containers</h2><hr>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">docker build -t friendlyname .  # Create image using this directory&apos;s Dockerfile</div><div class="line">docker run -p 4000:80 friendlyname  # Run &quot;friendlyname&quot; mapping port 4000 to 80</div><div class="line">docker run -d -p 4000:80 friendlyname         # Same thing, but in detached mode</div><div class="line">docker container ls                                # List all running containers</div><div class="line">docker container ls -a             # List all containers, even those not running</div><div class="line">docker container stop &lt;hash&gt;           # Gracefully stop the specified container</div><div class="line">docker container kill &lt;hash&gt;         # Force shutdown of the specified container</div><div class="line">docker container rm &lt;hash&gt;        # Remove specified container from this machine</div><div class="line">docker container rm $(docker container ls -a -q)         # Remove all containers</div><div class="line">docker image ls -a                             # List all images on this machine</div><div class="line">docker image rm &lt;image id&gt;            # Remove specified image from this machine</div><div class="line">docker image rm $(docker image ls -a -q)   # Remove all images from this machine</div><div class="line">docker login             # Log in this CLI session using your Docker credentials</div><div class="line">docker tag &lt;image&gt; username/repository:tag  # Tag &lt;image&gt; for upload to registry</div><div class="line">docker push username/repository:tag            # Upload tagged image to registry</div><div class="line">docker run username/repository:tag                   # Run image from a registry</div></pre></td></tr></table></figure>
 <h2 id="docker-learn-part3-Services"><a href="#docker-learn-part3-Services" class="headerlink" title="docker learn part3 Services"></a>docker learn part3 Services</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">docker stack ls                                            # List stacks or apps</div><div class="line">docker stack deploy -c &lt;composefile&gt; &lt;appname&gt;  # Run the specified Compose file</div><div class="line">docker service ls                 # List running services associated with an app</div><div class="line">docker service ps &lt;service&gt;                  # List tasks associated with an app</div><div class="line">docker inspect &lt;task or container&gt;                   # Inspect task or container</div><div class="line">docker container ls -q                                      # List container IDs</div><div class="line">docker stack rm &lt;appname&gt;                             # Tear down an application</div><div class="line">docker swarm leave --force      # Take down a single node swarm from the manager</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/12/11/Docker/" data-id="cjb1w7n1x0001sf11czv8o9k9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/12/11/Docker/" data-id="cjb1wdeea0003uu115ecvwgk6" class="article-share-link">Share</a>
       
       
     </footer>
