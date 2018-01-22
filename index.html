@@ -61,6 +61,135 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-set-up-my-bhw-server-part-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/22/set-up-my-bhw-server-part-1/" class="article-date">
+  <time datetime="2018-01-22T10:14:31.000Z" itemprop="datePublished">2018-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/22/set-up-my-bhw-server-part-1/">set up my bhw server (part 1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Set-up-VPS-bhw-part-1"><a href="#Set-up-VPS-bhw-part-1" class="headerlink" title="Set up VPS (bhw) part 1"></a>Set up VPS (bhw) part 1</h1><p>I puchased one year bhw vps, I’ll set up this VPS, do some simple default and record it.</p>
+<p><strong>Ubuntu</strong> I chosse Ubuntu as my VPS’s OS.</p>
+<ol>
+<li>open bwh1.net then click Services&gt;my services&gt;KiwiVM Control Panel&gt;install new OS </li>
+<li>then choose Ubuntu 16.04 and I received email contains a root user and passwd.</li>
+<li><p>ssh login root user then reset root passwd  by type command <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4. add user ```adduser username</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>add user as sudo <figure class="highlight plain"><figcaption><span>sudo -a username```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">6.  Default Vim Editor ```sudo update-alternatives --config editor</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>Sudo not using passwd <figure class="highlight plain"><figcaption><span>visudo``` change  ```%sudo ALL=(ALL:ALL) ALL``` to ```%sudo ALL=(ALL:ALL) NOPASSWD:ALL```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">8. login new user.```ssh -p xxx username@xxx.xxx.xxx.xxx</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>set up ssh-key login  <figure class="highlight plain"><figcaption><span>-p ~/.ssh``` ```touch ~/.ssh/authorized_keys``` ```chmod 600 ~/.ssh/authorized_keys```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">10. simple login ssh local machine,edit file ```~/.ssh/config</div></pre></td></tr></table></figure></p>
+</li>
+<li><p>login by simmple command <figure class="highlight plain"><figcaption><span>bwh```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">12. security ssh config ```sudo vim /etc/ssh/sshd_config</div></pre></td></tr></table></figure></p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">PasswordAuthentication no</div><div class="line">PermitRootLogin no</div></pre></td></tr></table></figure>
+<p>then reboot ssh service <code>sudo systemctl restart sshd.service</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/22/set-up-my-bhw-server-part-1/" data-id="cjcq2ma2c00043h11ns2nh5y0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Paul-Swift-lesssons-calculator" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/06/Paul-Swift-lesssons-calculator/" class="article-date">
+  <time datetime="2017-05-06T10:15:57.000Z" itemprop="datePublished">2017-05-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/06/Paul-Swift-lesssons-calculator/">Paul Swift lesssons - calculator</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/06/Paul-Swift-lesssons-calculator/" data-id="cjcq2ma2700013h11d2neepb7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-zsh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/05/zsh/" class="article-date">
+  <time datetime="2017-05-05T13:24:36.000Z" itemprop="datePublished">2017-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/05/zsh/">zsh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">vim ~/.zshrc</div><div class="line"></div><div class="line"></div><div class="line">$ #配置别名，例如：</div><div class="line"></div><div class="line">$ alias cls=&quot;clear&quot;</div><div class="line"></div><div class="line">$ alias ll=&quot;ls -l&quot;</div><div class="line"></div><div class="line">$ alias vi=&quot;vim&quot;</div><div class="line"></div><div class="line">$ #配置主题</div><div class="line"></div><div class="line">$ #在.zshrc里找到ZSH_THEME</div><div class="line"></div><div class="line">$ #将默认的ZSH_THEME=&quot;robbyrussell&quot;修改为</div><div class="line"></div><div class="line">$ ZSH_THEME=&quot;agnoster&quot;</div></pre></td></tr></table></figure></p>
+<p>修改完配置文件最为关键的一步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ~/.zshrc #每次修改完了.zshrc文件,必须执行这个命令</div></pre></td></tr></table></figure></p>
+<p>参考:<a href="http://www.jianshu.com/p/e45160d0ae27" target="_blank" rel="external">http://www.jianshu.com/p/e45160d0ae27</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cjcq2ma2b00033h118syzifj2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Multiple-Targets-common-files-in-Xcode-8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" class="article-date">
@@ -88,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cj2bv10iq0000zjt6uuzjrd3n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cjcq2ma2300003h11w1oo1svk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/21/hello-world/" data-id="cj2bv10iu0001zjt6gqd596oi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/21/hello-world/" data-id="cjcq2ma2a00023h112862btsb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +289,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
     </div>
   </div>
 
@@ -171,6 +300,18 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/01/22/set-up-my-bhw-server-part-1/">set up my bhw server (part 1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/06/Paul-Swift-lesssons-calculator/">Paul Swift lesssons - calculator</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/05/zsh/">zsh</a>
+          </li>
         
           <li>
             <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/">Multiple Targets common files in Xcode 8</a>
@@ -192,7 +333,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
