@@ -61,6 +61,174 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-微信小程序抓包" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/14/微信小程序抓包/" class="article-date">
+  <time datetime="2018-08-14T04:21:35.000Z" itemprop="datePublished">2018-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/14/微信小程序抓包/">微信小程序抓包</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>最近考虑开发一款小程序，看到别人做的比较好的小程序就想模仿，于是想要抓取别人的接口</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>macOS<br>Charles 4.0</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul>
+<li>菜单 -&gt; Proxy -&gt; SSL Proxying Settings… -&gt; 勾选Enable SSL Proxying -&gt; 点击Add -&gt; 填入 * 抓所有域名<br><img src="https://user-images.githubusercontent.com/8413791/34810238-03f72f70-f6d5-11e7-99b2-32871f6a4b46.png" alt=""></li>
+</ul>
+<ul>
+<li>菜单 -&gt; Help -&gt; SSL Proxying<br><img src="https://user-images.githubusercontent.com/8413791/34810057-1e342902-f6d4-11e7-9619-fa51675bba08.png" alt=""></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/8413791/34810106-578105a4-f6d4-11e7-80a8-a95be83bb0ea.png" alt=""></p>
+<p>确保手机和电脑处于同一个局域网下，并在手机上设置代理 IP 和 端口（你电脑的局域网 IP 和抓包工具设置的端口，通常为 8080 或者 8888 也可以自己设置）</p>
+<p>手机访问 chls.pro/ssl 地址，下载和安装抓包工具的 CA 证书。</p>
+<p><strong> 部分 iOS 系统需要在：设置 -&gt; 通用 -&gt; 关于本机 -&gt; 证书信任设置 -&gt; 启用完全信任Charles证书 </strong>  (我的测试机iPhone5 就卡在了这里很久，有的https能够抓取，有的不行，最后才找到这一点，Done ^_^)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/14/微信小程序抓包/" data-id="cjkt7rdxn0004kf11gc64icvp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/13/hello-world/" class="article-date">
+  <time datetime="2018-08-12T17:24:42.000Z" itemprop="datePublished">2018-08-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/13/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/13/hello-world/" data-id="cjkt7rdxm0002kf11vxgam10b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Paul-Swift-lesssons-calculator" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/06/Paul-Swift-lesssons-calculator/" class="article-date">
+  <time datetime="2017-05-06T10:15:57.000Z" itemprop="datePublished">2017-05-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/06/Paul-Swift-lesssons-calculator/">Paul Swift lesssons - calculator</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/06/Paul-Swift-lesssons-calculator/" data-id="cjkt7rdxh0000kf11ambpb91v" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-zsh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/05/zsh/" class="article-date">
+  <time datetime="2017-05-05T13:24:36.000Z" itemprop="datePublished">2017-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/05/zsh/">zsh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">vim ~/.zshrc</div><div class="line"></div><div class="line"></div><div class="line">$ #配置别名，例如：</div><div class="line"></div><div class="line">$ alias cls=&quot;clear&quot;</div><div class="line"></div><div class="line">$ alias ll=&quot;ls -l&quot;</div><div class="line"></div><div class="line">$ alias vi=&quot;vim&quot;</div><div class="line"></div><div class="line">$ #配置主题</div><div class="line"></div><div class="line">$ #在.zshrc里找到ZSH_THEME</div><div class="line"></div><div class="line">$ #将默认的ZSH_THEME=&quot;robbyrussell&quot;修改为</div><div class="line"></div><div class="line">$ ZSH_THEME=&quot;agnoster&quot;</div></pre></td></tr></table></figure></p>
+<p>修改完配置文件最为关键的一步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ~/.zshrc #每次修改完了.zshrc文件,必须执行这个命令</div></pre></td></tr></table></figure></p>
+<p>参考:<a href="http://www.jianshu.com/p/e45160d0ae27" target="_blank" rel="external">http://www.jianshu.com/p/e45160d0ae27</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cjkt7rdxn0003kf111pb0jmah" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Multiple-Targets-common-files-in-Xcode-8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" class="article-date">
@@ -88,52 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cj2bv10iq0000zjt6uuzjrd3n" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/21/hello-world/" class="article-date">
-  <time datetime="2017-03-21T03:21:28.000Z" itemprop="datePublished">2017-03-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/21/hello-world/" data-id="cj2bv10iu0001zjt6gqd596oi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cjkt7rdxk0001kf11haze5qsi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +283,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
     </div>
   </div>
 
@@ -173,11 +296,23 @@
       <ul>
         
           <li>
-            <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/">Multiple Targets common files in Xcode 8</a>
+            <a href="/2018/08/14/微信小程序抓包/">微信小程序抓包</a>
           </li>
         
           <li>
-            <a href="/2017/03/21/hello-world/">Hello World</a>
+            <a href="/2018/08/13/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/06/Paul-Swift-lesssons-calculator/">Paul Swift lesssons - calculator</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/05/zsh/">zsh</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/">Multiple Targets common files in Xcode 8</a>
           </li>
         
       </ul>
@@ -192,7 +327,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
