@@ -61,6 +61,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/" class="article-date">
+  <time datetime="2018-08-14T13:00:19.000Z" itemprop="datePublished">2018-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/">[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leaferx.online/2018/03/17/hexo-auto-open-vscode/" target="_blank" rel="external">原文</a></p>
+<h2 id="添加自动打开编辑器脚本"><a href="#添加自动打开编辑器脚本" class="headerlink" title="添加自动打开编辑器脚本"></a>添加自动打开编辑器脚本</h2><p>在 <figure class="highlight plain"><figcaption><span>下新建 ```AutoOpenEditor.js``` 文件（取其他名字也可以，不影响）（如果没有 scripts 目录则新建），并粘贴以下代码，保存。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```javascript </div><div class="line">let spawn = require(&apos;hexo-util/lib/spawn&apos;);</div><div class="line"></div><div class="line">hexo.on(&apos;new&apos;, (data) =&gt; &#123;</div><div class="line">  spawn(&apos;code&apos;, [hexo.base_dir, data.path]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>这样，在你每次 hexo new 的时候，脚本就会自动帮你打开 VS Code 并切换到博客根目录顺带打开新建的 .md 文件啦。<br>是不是又懒了一点呢qwq</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/" data-id="cjktpwbwo0000kl11vdfnl515" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-微信小程序抓包" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/14/微信小程序抓包/" class="article-date">
@@ -99,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/14/微信小程序抓包/" data-id="cjkt7rdxn0004kf11gc64icvp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/14/微信小程序抓包/" data-id="cjktpwbwu0005kl115c1lo91e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/13/hello-world/" data-id="cjkt7rdxm0002kf11vxgam10b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/13/hello-world/" data-id="cjktpwbwu0004kl11yvz13umx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +219,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/06/Paul-Swift-lesssons-calculator/" data-id="cjkt7rdxh0000kf11ambpb91v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/06/Paul-Swift-lesssons-calculator/" data-id="cjktpwbwt0003kl11ywqzbxdf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cjkt7rdxn0003kf111pb0jmah" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/05/zsh/" data-id="cjktpwbws0002kl11selllvej" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cjkt7rdxk0001kf11haze5qsi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" data-id="cjktpwbwr0001kl11rd6irzn6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,6 +335,10 @@
       <ul>
         
           <li>
+            <a href="/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/">[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章</a>
+          </li>
+        
+          <li>
             <a href="/2018/08/14/微信小程序抓包/">微信小程序抓包</a>
           </li>
         
@@ -309,10 +352,6 @@
         
           <li>
             <a href="/2017/05/05/zsh/">zsh</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/">Multiple Targets common files in Xcode 8</a>
           </li>
         
       </ul>
