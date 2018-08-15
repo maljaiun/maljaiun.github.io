@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.4.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.4.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="做过网站的朋友应该都知道 目前大部分的虚拟主机、空间都是有域名绑定限制的，如限制一个空间只能建一个网站，甚至连用子域名开个子站都不行，让人很郁闷。
+其实还是有办法的，下面以阿里云主机为例，阿里云虚拟主机使用.htaccess绑定域名，突破网站域名绑定限制
+工具/原料
+阿里云主机
+域名
+
+方法/步骤
+登陆域名管理台 把需要绑定的域名 解析到你的空间；
+
+登陆虚拟主机/空间管理台 绑定域名到空间;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云虚拟主机部署多域名https">
+<meta property="og:url" content="http://yoursite.com/2018/08/15/阿里云虚拟主机部署多域名https/index.html">
+<meta property="og:site_name" content="米修's Tech">
+<meta property="og:description" content="做过网站的朋友应该都知道 目前大部分的虚拟主机、空间都是有域名绑定限制的，如限制一个空间只能建一个网站，甚至连用子域名开个子站都不行，让人很郁闷。
+其实还是有办法的，下面以阿里云主机为例，阿里云虚拟主机使用.htaccess绑定域名，突破网站域名绑定限制
+工具/原料
+阿里云主机
+域名
+
+方法/步骤
+登陆域名管理台 把需要绑定的域名 解析到你的空间；
+
+登陆虚拟主机/空间管理台 绑定域名到空间;">
+<meta property="og:updated_time" content="2018-08-15T08:34:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="阿里云虚拟主机部署多域名https">
+<meta name="twitter:description" content="做过网站的朋友应该都知道 目前大部分的虚拟主机、空间都是有域名绑定限制的，如限制一个空间只能建一个网站，甚至连用子域名开个子站都不行，让人很郁闷。
+其实还是有办法的，下面以阿里云主机为例，阿里云虚拟主机使用.htaccess绑定域名，突破网站域名绑定限制
+工具/原料
+阿里云主机
+域名
+
+方法/步骤
+登陆域名管理台 把需要绑定的域名 解析到你的空间；
+
+登陆虚拟主机/空间管理台 绑定域名到空间;">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/15/阿里云虚拟主机部署多域名https/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>阿里云虚拟主机部署多域名https | 米修's Tech</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">米修's Tech</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/15/阿里云虚拟主机部署多域名https/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mi Xiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="米修's Tech">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">阿里云虚拟主机部署多域名https
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-15 16:21:53 / 修改时间：16:34:32" itemprop="dateCreated datePublished" datetime="2018-08-15T16:21:53+08:00">2018-08-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>做过网站的朋友应该都知道 目前大部分的虚拟主机、空间都是有域名绑定限制的，如限制一个空间只能建一个网站，甚至连用子域名开个子站都不行，让人很郁闷。</p>
+<p>其实还是有办法的，下面以阿里云主机为例，阿里云虚拟主机使用.htaccess绑定域名，突破网站域名绑定限制</p>
+<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><ul>
+<li>阿里云主机</li>
+<li>域名</li>
+</ul>
+<h2 id="方法-步骤"><a href="#方法-步骤" class="headerlink" title="方法/步骤"></a>方法/步骤</h2><ol>
+<li>登陆域名管理台 把需要绑定的域名 解析到你的空间；</li>
+</ol>
+<p>登陆虚拟主机/空间管理台 绑定域名到空间;</p>
+<ol start="2">
+<li><p>在本地建个txt文件，复制下面的代码修改替换你要绑的域名和目录，并传到网站主目录下再改成为.htaccess。</p>
+</li>
+<li><p>编辑.htaccess</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;IfModule mod_rewrite.c&gt;</div><div class="line">RewriteEngine On</div><div class="line"></div><div class="line">RewriteBase /</div><div class="line"></div><div class="line"></div><div class="line">RewriteCond %&#123;HTTP_HOST&#125; ^mp.siunim.top$ [NC]</div><div class="line"></div><div class="line">RewriteCond %&#123;REQUEST_URI&#125; !^/mp-siunim-top/</div><div class="line"></div><div class="line">RewriteRule ^(.*)$ mp-siunim-top/$1?Rewrite [L,QSA]</div><div class="line"></div><div class="line"></div><div class="line">RewriteCond %&#123;HTTP_HOST&#125; ^www.siunim.top$ [NC]</div><div class="line"></div><div class="line">RewriteCond %&#123;REQUEST_URI&#125; !^/www-siunim-top/</div><div class="line"></div><div class="line">RewriteRule ^(.*)$ www-siunim-top/$1?Rewrite [L,QSA]</div><div class="line"></div><div class="line"></div><div class="line">RewriteCond %&#123;HTTP_HOST&#125; ^siunim.top$ [NC]</div><div class="line"></div><div class="line">RewriteCond %&#123;REQUEST_URI&#125; !^/www-siunim-top/</div><div class="line"></div><div class="line">RewriteRule ^(.*)$ www-siunim-top/$1?Rewrite [L,QSA]</div></pre></td></tr></table></figure>
+<p>至此，我已经可以访问siunim.top,<a href="http://www.siunim.top,mp.siunim.top分别对应了www-siunim-top目录与mp-siunim-top，但是，你会发现你可以通过访问siunim.top/mp-siunim-top/" target="_blank" rel="external">www.siunim.top,mp.siunim.top分别对应了www-siunim-top目录与mp-siunim-top，但是，你会发现你可以通过访问siunim.top/mp-siunim-top/</a> 来访问mp-siunim-top目录下的内容，这不是我想要的，接下来完成最后一步，在mp-siunim-top目录下也增加一个.htaccess文件，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;IfModule mod_rewrite.c&gt;</div><div class="line"></div><div class="line">RewriteEngine On</div><div class="line"></div><div class="line">RewriteBase /</div><div class="line"></div><div class="line">#只许绑定的域名访问</div><div class="line"></div><div class="line">RewriteCond %&#123;HTTP_HOST&#125; !^mp.siunim.top$ [NC]</div><div class="line"></div><div class="line">RewriteRule (.*) http://mp.siunim.top/$1 [L,R=301]</div><div class="line"></div><div class="line">#对绑定目录下与 同名的目录的处理</div><div class="line"></div><div class="line">RewriteCond %&#123;REQUEST_URI&#125; ^/mp-siunim-top/ [NC]</div><div class="line"></div><div class="line">RewriteCond %&#123;QUERY_STRING&#125; !^(.*)?Rewrite</div><div class="line"></div><div class="line">RewriteRule ^(.*)$ /%&#123;REQUEST_URI&#125;/%&#123;REQUEST_URI&#125;/$1?Rewrite [L,QSA]</div><div class="line"></div><div class="line">&lt;/IfModule&gt;</div><div class="line"></div><div class="line">END</div></pre></td></tr></table></figure>
+<h2 id="支持HTTPS"><a href="#支持HTTPS" class="headerlink" title="支持HTTPS"></a>支持HTTPS</h2><ul>
+<li>第一步：申请CA证书服务</li>
+</ul>
+<p>网站需要开启HTTPS肯定是要申请证书的，我申请的是阿里云云盾证书服务中免费型DV SSL数字证书,一个阿云帐户最多签发20张免费https证书。</p>
+<ul>
+<li>第二步：购买阿里云CDN服务</li>
+</ul>
+<p>阿里云虚拟主机目前是不支持https的，这个我之前有提交工单咨询了客服，所以是毋庸置疑的。不过我们可以通过阿里云的cdn服务来跳转一下实现部署https，这个其实和百度云加速中付费版支持https的cdn效果是一样的。</p>
+<p>阿里云CDN服务可以选择CDN流量包（国内版）和HTTPS请求包这两个其中一个，因为我要部署的网站流量不大也不小，所以从性价比考虑我选择的是50元/年（1000万次请求数）的套餐。</p>
+<ul>
+<li>第三步：CDN页面配置加速域名</li>
+</ul>
+<p>在CDN页面增加需要加速的域名，这步操作很简单，按照提示选择，等待审核通过就可以了！</p>
+<p>（1）业务类型：图片小文件</p>
+<p>（2）原站类型：IP，后面填写下ip地址就行</p>
+<p>（3）端口：80端口（一定只能选80，因为虚拟主机443端口不开放）</p>
+<ul>
+<li>第四步：配置CDN的SSL，开启https加速</li>
+</ul>
+<p>在CDN页面管理》配置，进入配置页面进行HTTPS设置，如果你也是和我一样在阿里云申请的免费证书只要直接选择就行，如果不是就选择自定义上传下就可以完成，不过要记得最后的跳转类型一定记得选HTTP→HTTPS。</p>
+<p>配置页面除了“过滤参数”和“协议跟随回源”不要开启，其它相关配置都可以开启，特别强调“过滤参数”一定要关闭！！CDN的过滤参数没关掉的话会导致一直出错！</p>
+<ul>
+<li>第五步：DNS解析记录修改</li>
+</ul>
+<p>要启用CDN加速服务，需要将阿里云CDN分配给您的CNAME指向您的加速域名；添加或删除后，受解析影响大约10分钟左右可以看到状态更新。</p>
+<ul>
+<li>Done</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/" rel="next" title="[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章">
+                <i class="fa fa-chevron-left"></i> [HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mi Xiu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工具-原料"><span class="nav-number">1.</span> <span class="nav-text">工具/原料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法-步骤"><span class="nav-number">2.</span> <span class="nav-text">方法/步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#支持HTTPS"><span class="nav-number">3.</span> <span class="nav-text">支持HTTPS</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mi Xiu</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.2.2</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
