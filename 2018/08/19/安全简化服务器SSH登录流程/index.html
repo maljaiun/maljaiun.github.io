@@ -108,26 +108,32 @@
 
 
 
-  <meta name="description" content="原文
-添加自动打开编辑器脚本在 下新建 ```AutoOpenEditor.js``` 文件（取其他名字也可以，不影响）（如果没有 scripts 目录则新建），并粘贴以下代码，保存。1234567```javascript let spawn = require(&amp;apos;hexo-util/lib/spawn&amp;apos;);hexo.on(&amp;apos;new&amp;apos;, (data) =&amp;">
+  <meta name="description" content="前一周入了腾讯云学习套餐，还是很优惠的，然后使用过程中发现ssh登录挺麻烦的，就想着安全的简化一下，生命在于折腾嘛
+修改SSH端口一般SSH默认端口是22，不安全，这里修改一下。
+1. 修改 /etc/ssh/sshd_config 文件1vim /etc/ssh/sshd_config
+找到 #Port 22，去掉前面的 #，并添加一行 Port xxxx （xxxx 为新的 SSH 端口）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章">
-<meta property="og:url" content="http://yoursite.com/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/index.html">
+<meta property="og:title" content="安全简化服务器SSH登录流程">
+<meta property="og:url" content="http://yoursite.com/2018/08/19/安全简化服务器SSH登录流程/index.html">
 <meta property="og:site_name" content="米修's Tech">
-<meta property="og:description" content="原文
-添加自动打开编辑器脚本在 下新建 ```AutoOpenEditor.js``` 文件（取其他名字也可以，不影响）（如果没有 scripts 目录则新建），并粘贴以下代码，保存。1234567```javascript let spawn = require(&amp;apos;hexo-util/lib/spawn&amp;apos;);hexo.on(&amp;apos;new&amp;apos;, (data) =&amp;">
-<meta property="og:updated_time" content="2018-08-14T13:02:31.000Z">
+<meta property="og:description" content="前一周入了腾讯云学习套餐，还是很优惠的，然后使用过程中发现ssh登录挺麻烦的，就想着安全的简化一下，生命在于折腾嘛
+修改SSH端口一般SSH默认端口是22，不安全，这里修改一下。
+1. 修改 /etc/ssh/sshd_config 文件1vim /etc/ssh/sshd_config
+找到 #Port 22，去掉前面的 #，并添加一行 Port xxxx （xxxx 为新的 SSH 端口）">
+<meta property="og:updated_time" content="2018-08-19T14:29:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章">
-<meta name="twitter:description" content="原文
-添加自动打开编辑器脚本在 下新建 ```AutoOpenEditor.js``` 文件（取其他名字也可以，不影响）（如果没有 scripts 目录则新建），并粘贴以下代码，保存。1234567```javascript let spawn = require(&amp;apos;hexo-util/lib/spawn&amp;apos;);hexo.on(&amp;apos;new&amp;apos;, (data) =&amp;">
+<meta name="twitter:title" content="安全简化服务器SSH登录流程">
+<meta name="twitter:description" content="前一周入了腾讯云学习套餐，还是很优惠的，然后使用过程中发现ssh登录挺麻烦的，就想着安全的简化一下，生命在于折腾嘛
+修改SSH端口一般SSH默认端口是22，不安全，这里修改一下。
+1. 修改 /etc/ssh/sshd_config 文件1vim /etc/ssh/sshd_config
+找到 #Port 22，去掉前面的 #，并添加一行 Port xxxx （xxxx 为新的 SSH 端口）">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/19/安全简化服务器SSH登录流程/"/>
 
 
 
@@ -137,7 +143,7 @@
   };
 </script>
 
-  <title>[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章 | 米修's Tech</title>
+  <title>安全简化服务器SSH登录流程 | 米修's Tech</title>
   
 
 
@@ -282,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/HEXO小技巧-在-hexo-new-的时候自动用-VS-Code-打开新建文章/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/19/安全简化服务器SSH登录流程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mi Xiu">
@@ -299,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[HEXO小技巧]在 hexo new 的时候自动用 VS Code 打开新建文章
+          <h1 class="post-title" itemprop="name headline">安全简化服务器SSH登录流程
               
             
           </h1>
@@ -324,7 +330,7 @@
                 
               
 
-              <time title="创建时间：2018-08-14 21:00:19 / 修改时间：21:02:31" itemprop="dateCreated datePublished" datetime="2018-08-14T21:00:19+08:00">2018-08-14</time>
+              <time title="创建时间：2018-08-19 20:19:28 / 修改时间：22:29:05" itemprop="dateCreated datePublished" datetime="2018-08-19T20:19:28+08:00">2018-08-19</time>
             
 
             
@@ -362,9 +368,28 @@
       
 
       
-        <p><a href="https://leaferx.online/2018/03/17/hexo-auto-open-vscode/" target="_blank" rel="external">原文</a></p>
-<h2 id="添加自动打开编辑器脚本"><a href="#添加自动打开编辑器脚本" class="headerlink" title="添加自动打开编辑器脚本"></a>添加自动打开编辑器脚本</h2><p>在 <figure class="highlight plain"><figcaption><span>下新建 ```AutoOpenEditor.js``` 文件（取其他名字也可以，不影响）（如果没有 scripts 目录则新建），并粘贴以下代码，保存。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```javascript </div><div class="line">let spawn = require(&apos;hexo-util/lib/spawn&apos;);</div><div class="line"></div><div class="line">hexo.on(&apos;new&apos;, (data) =&gt; &#123;</div><div class="line">  spawn(&apos;code&apos;, [hexo.base_dir, data.path]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>这样，在你每次 hexo new 的时候，脚本就会自动帮你打开 VS Code 并切换到博客根目录顺带打开新建的 .md 文件啦。<br>是不是又懒了一点呢qwq</p>
+        <p>前一周入了腾讯云学习套餐，还是很优惠的，然后使用过程中发现ssh登录挺麻烦的，就想着安全的简化一下，生命在于折腾嘛</p>
+<h1 id="修改SSH端口"><a href="#修改SSH端口" class="headerlink" title="修改SSH端口"></a>修改SSH端口</h1><p>一般SSH默认端口是22，不安全，这里修改一下。</p>
+<h2 id="1-修改-etc-ssh-sshd-config-文件"><a href="#1-修改-etc-ssh-sshd-config-文件" class="headerlink" title="1. 修改 /etc/ssh/sshd_config 文件"></a>1. 修改 /etc/ssh/sshd_config 文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/ssh/sshd_config</div></pre></td></tr></table></figure>
+<p>找到 #Port 22，去掉前面的 #，并添加一行 Port xxxx （xxxx 为新的 SSH 端口）</p>
+<p>可以使用下面命令查看端口是否被占用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">netstat -tnlp           # 查看端口</div><div class="line">netstat -tnlp |grep xx # 查看xx端口是否被占用</div></pre></td></tr></table></figure>
+<h2 id="2-关掉-SELINUX"><a href="#2-关掉-SELINUX" class="headerlink" title="2. 关掉 SELINUX"></a>2. 关掉 SELINUX</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sed -i &apos;s/SELINUX=enforcing/SELINUX=disabled/&apos; /etc/selinux/config</div><div class="line">grep SELINUX=disabled /etc/selinux/config</div><div class="line">setenforce 0</div></pre></td></tr></table></figure>
+<p>没有config文件可以创建一个 </p>
+<h2 id="3-添加端口到防火墙"><a href="#3-添加端口到防火墙" class="headerlink" title="3.添加端口到防火墙"></a>3.添加端口到防火墙</h2><h3 id="centos"><a href="#centos" class="headerlink" title="centos"></a>centos</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --zone=public --add-port=XXXX/tcp --permanent    //XXXX为新的 SSH 端口</div></pre></td></tr></table></figure>
+<p>如防火墙未运行，需要手动启动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start firewalld.service</div></pre></td></tr></table></figure>
+<p>重启防火墙：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --reload</div></pre></td></tr></table></figure>
+<p>确认端口是否添加成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --zone=public --query-port=XXXX/tcp    //XXXX为新的 SSH 端口</div></pre></td></tr></table></figure>
+<p>添加成功会返回 yes，否则返回 no。</p>
+<h3 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h3><p>注意：<br>新端口应该添加了允许访问的列表里，免得将自己锁在了服务器外面！！！参考这里，在 Linux 命令行输入的指令为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firewall-cmd --zone=public --add-port=你的端口/tcp --permanent</div></pre></td></tr></table></figure></p>
+<h2 id="4-重启ssh服务"><a href="#4-重启ssh服务" class="headerlink" title="4.重启ssh服务"></a>4.重启ssh服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ssh restart</div></pre></td></tr></table></figure>
+<h2 id="5-测试新端口ssh登录服务器"><a href="#5-测试新端口ssh登录服务器" class="headerlink" title="5.测试新端口ssh登录服务器"></a>5.测试新端口ssh登录服务器</h2><h2 id="6-查看Auth-log-检查SSH是否被扫"><a href="#6-查看Auth-log-检查SSH是否被扫" class="headerlink" title="6.查看Auth.log,检查SSH是否被扫"></a>6.查看Auth.log,检查SSH是否被扫</h2><p>查看用密码登陆成功的IP地址及次数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep &quot;Accepted password for root&quot; /var/log/auth.log | awk &apos;&#123;print $11&#125;&apos; | sort | uniq -c | sort -nr | more</div></pre></td></tr></table></figure>
+<p>查看用密码登陆失败的IP地址及次数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep &quot;Failed password for root&quot; /var/log/auth.log | awk &apos;&#123;print $11&#125;&apos; | sort | uniq -c | sort -nr | more</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -392,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/14/微信小程序抓包/" rel="next" title="微信小程序抓包">
-                <i class="fa fa-chevron-left"></i> 微信小程序抓包
+              <a href="/2018/08/15/阿里云虚拟主机部署多域名https/" rel="next" title="阿里云虚拟主机部署多域名https">
+                <i class="fa fa-chevron-left"></i> 阿里云虚拟主机部署多域名https
               </a>
             
           </div>
@@ -401,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/15/阿里云虚拟主机部署多域名https/" rel="prev" title="阿里云虚拟主机部署多域名https">
-                阿里云虚拟主机部署多域名https <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -514,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加自动打开编辑器脚本"><span class="nav-number">1.</span> <span class="nav-text">添加自动打开编辑器脚本</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#修改SSH端口"><span class="nav-number">1.</span> <span class="nav-text">修改SSH端口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-修改-etc-ssh-sshd-config-文件"><span class="nav-number">1.1.</span> <span class="nav-text">1. 修改 /etc/ssh/sshd_config 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-关掉-SELINUX"><span class="nav-number">1.2.</span> <span class="nav-text">2. 关掉 SELINUX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加端口到防火墙"><span class="nav-number">1.3.</span> <span class="nav-text">3.添加端口到防火墙</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#centos"><span class="nav-number">1.3.1.</span> <span class="nav-text">centos</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ubuntu"><span class="nav-number">1.3.2.</span> <span class="nav-text">ubuntu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-重启ssh服务"><span class="nav-number">1.4.</span> <span class="nav-text">4.重启ssh服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试新端口ssh登录服务器"><span class="nav-number">1.5.</span> <span class="nav-text">5.测试新端口ssh登录服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-查看Auth-log-检查SSH是否被扫"><span class="nav-number">1.6.</span> <span class="nav-text">6.查看Auth.log,检查SSH是否被扫</span></a></li></ol></li></ol></div>
             
 
           </div>
