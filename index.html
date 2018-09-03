@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/24/ffmpeg-nginx-rtmp-module-Nodejs/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/03/阿里云虚拟主机CDN开启HTTPS强制挑战无法加载WP站点CSS问题解决/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mi Xiu">
@@ -295,8 +295,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/24/ffmpeg-nginx-rtmp-module-Nodejs/" itemprop="url">
-                  ffmpeg nginx rtmp module & Nodejs
+                <a class="post-title-link" href="/2018/09/03/阿里云虚拟主机CDN开启HTTPS强制挑战无法加载WP站点CSS问题解决/" itemprop="url">
+                  阿里云虚拟主机CDN开启HTTPS强制挑战无法加载WP站点CSS问题解决
                 </a>
               
             
@@ -322,12 +322,693 @@
                 
               
 
-              <time title="创建时间：2018-08-24 16:04:26 / 修改时间：18:22:33" itemprop="dateCreated datePublished" datetime="2018-08-24T16:04:26+08:00">2018-08-24</time>
+              <time title="创建时间：2018-09-03 23:45:47" itemprop="dateCreated datePublished" datetime="2018-09-03T23:45:47+08:00">2018-09-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-04 00:30:06" itemprop="dateModified" datetime="2018-09-04T00:30:06+08:00">2018-09-04</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ref:<a href="https://www.simcf.cc/88.html/" target="_blank" rel="external">https://www.simcf.cc/88.html/</a></p>
+<blockquote>
+<p>今天尝试用阿里云虚拟主机上传wordpress建站惊讶的发现居然没有CSS效果，经过一番查询得出结论可能是阿里云HTTPS的问题，具体原理不明，解决方案如下</p>
+</blockquote>
+<ol>
+<li><p>照常上传wordpress压缩包利用主机后台解压缩</p>
+</li>
+<li><p>访问域名开始建站，此时没有<code>css</code>效果，不要惊慌</p>
+</li>
+</ol>
+<p><img src="https://cos.siunim.top/res/sldksf.png" alt=""><br><img src="https://cos.siunim.top/res/kjw7.png" alt=""></p>
+<ol start="3">
+<li>建站完毕后，利用FTP工具将站点配置文件<code>wp-config.php</code>拷贝到本地做修改，增加以下配置代码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$_SERVER[&apos;HTTPS&apos;] = &apos;on&apos;;</div><div class="line">define(&apos;FORCE_SSL_LOGIN&apos;, true);</div><div class="line">define(&apos;FORCE_SSL_ADMIN&apos;, true);</div></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>重新在浏览器刷新域名</p>
+</li>
+<li><p>Done<br><img src="https://cos.siunim.top/res/k86.png" alt=""></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/腾讯云COS相关/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mi Xiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="米修's Tech">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/腾讯云COS相关/" itemprop="url">
+                  腾讯云COS相关
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-31 21:52:18" itemprop="dateCreated datePublished" datetime="2018-08-31T21:52:18+08:00">2018-08-31</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/30/wordpress-ann-mnniApp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mi Xiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="米修's Tech">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/30/wordpress-ann-mnniApp/" itemprop="url">
+                  wordpress ann mnniApp
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-30 01:39:33" itemprop="dateCreated datePublished" datetime="2018-08-30T01:39:33+08:00">2018-08-30</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/26/Mpvue-小程序开发初试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mi Xiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="米修's Tech">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/26/Mpvue-小程序开发初试/" itemprop="url">
+                  Mpvue-小程序开发初试
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-26 15:25:58 / 修改时间：18:34:25" itemprop="dateCreated datePublished" datetime="2018-08-26T15:25:58+08:00">2018-08-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <!-- <article class="markdown-body entry-content" itemprop="text">
+
+# [](#ithome-lite-web-版)ithome-lite ([WEB 版](https://github.com/F-loat/ithome-lite/tree/web-version))
+
+> SiuNimTop小程序版客户端
+
+## [](#相关依赖)相关依赖
+
+*   [flyio](https://github.com/wendux/fly/blob/master/README-CH.md) - 同时支持浏览器、小程序、Node、Weex 及快应用的基于 Promise 的跨平台请求库
+*   [mpvue-entry](https://github.com/F-loat/mpvue-entry) - 集中式页面配置，不再需要重复编辑各页面的 main.js 文件
+*   [mpvue-router-patch](https://github.com/F-loat/mpvue-router-patch) - 在 mpvue 中使用 vue-router 兼容的路由写法
+*   [xmlstring2json](https://github.com/vilien/xmlstring2json) - xml 字符串转换 json 格式，适用于微信小程序
+
+## [](#项目模板)项目模板
+
+*   [F-loat/mpvue-quickstart](https://github.com/F-loat/mpvue-quickstart) 使用 mpvue-entry 配置入口，支持新增页面热更新
+
+<pre>$ vue init F-loat/mpvue-quickstart my-project</pre>
+
+## [](#截图展示)截图展示
+
+[![](https://github.com/F-loat/ithome-lite/raw/master/screenshots/news.jpg)](/F-loat/ithome-lite/blob/master/screenshots/news.jpg) [![](https://github.com/F-loat/ithome-lite/raw/master/screenshots/detail.jpg)](/F-loat/ithome-lite/blob/master/screenshots/detail.jpg) [![](https://github.com/F-loat/ithome-lite/raw/master/screenshots/quanzi.jpg)](/F-loat/ithome-lite/blob/master/screenshots/quanzi.jpg)
+
+## [](#tips)Tips
+
+*   flyio 使用方法
+
+具体内容参见 [微信小程序中使用 flyio](https://wendux.github.io/dist/#/doc/flyio/wx)，这里提示下小程序中需要引入的是 `flyio/dist/npm/wx.js` 这个文件，可以配置下 webpack 的 alias 方便调用
+
+<pre>alias: {
+  '@': resolve('src'),
+  vue: 'mpvue',
+  flyio: 'flyio/dist/npm/wx',
+  wx: resolve('src/utils/wx')
+}</pre>
+
+*   vuex 使用方法
+
+建立 `src/store/index.js` 文件
+
+<pre>import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
+  state: {
+  },
+  mutations: {
+  },
+  actions: {
+  }
+})
+
+export default store</pre>
+
+在 `src/main.js` 中引用
+
+<pre>import Vue from 'vue'
+import store from '@/store'
+import App from '@/App'
+
+const app = new Vue({
+  store,
+  ...App
+}).$mount()</pre>
+
+最后在需要使用 vuex 的页面相对应的 `main.js` 文件中像 `src/main.js` 一样引用即可
+
+## [](#部分-api-列表)部分 api 列表
+
+*   新闻列表 [https://api.ithome.com/json/newslist/news?r=0](https://api.ithome.com/json/newslist/news?r=0)
+
+
+## [](#相关文章)相关文章
+
+*   [Mpvue 小程序转 Web 实践总结](https://juejin.im/post/5ab84a33f265da239c7b56bd)
+
+</article>
+ -->
+<h2 id="数据请求封装"><a href="#数据请求封装" class="headerlink" title="数据请求封装"></a>数据请求封装</h2><p> 在<code>utils/index.js</code>中实现方法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 滚动广告数据格式化</span></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">formatSlideList</span> (<span class="params">slide</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> title = slide.title[<span class="string">'#text'</span>]</div><div class="line">  <span class="keyword">const</span> image = slide.image[<span class="string">'#text'</span>]</div><div class="line">  <span class="keyword">const</span> link = slide.link[<span class="string">'#text'</span>]</div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    title,</div><div class="line">    image,</div><div class="line">    <span class="attr">link</span>: <span class="string">`/pages/news/detail?id=<span class="subst">$&#123;link&#125;</span>&amp;title=<span class="subst">$&#123;title&#125;</span>`</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line"> </div><div class="line">  formatSlideList</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> 新建<code>utils/wx.js</code>文件<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> wx</div></pre></td></tr></table></figure></p>
+<p> 新建<code>utils/request.js</code>文件<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> wx <span class="keyword">from</span> <span class="string">'wx'</span></div><div class="line"><span class="keyword">import</span> Fly <span class="keyword">from</span> <span class="string">'flyio'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> request = <span class="keyword">new</span> Fly()</div><div class="line"></div><div class="line">request.interceptors.request.use(<span class="function">(<span class="params">request</span>) =&gt;</span> &#123;</div><div class="line">  wx.showNavigationBarLoading()</div><div class="line">  <span class="keyword">return</span> request</div><div class="line">&#125;)</div><div class="line"></div><div class="line">request.interceptors.response.use(</div><div class="line">  <span class="function">(<span class="params">response, promise</span>) =&gt;</span> &#123;</div><div class="line">    wx.hideNavigationBarLoading()</div><div class="line">    <span class="keyword">return</span> promise.resolve(response.data)</div><div class="line">  &#125;,</div><div class="line">  (err, promise) =&gt; &#123;</div><div class="line">    wx.hideNavigationBarLoading()</div><div class="line">    wx.showToast(&#123;</div><div class="line">      <span class="attr">title</span>: err.message,</div><div class="line">      <span class="attr">icon</span>: <span class="string">'none'</span></div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">return</span> promise.resolve()</div><div class="line">  &#125;</div><div class="line">)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> request</div></pre></td></tr></table></figure></p>
+<p> 新建<code>utils/api.js</code><br> <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">'./request'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> baseUrlApi = <span class="string">'https://api.ithome.com'</span></div><div class="line"><span class="keyword">const</span> api = &#123;</div><div class="line"> <span class="attr">getSlides</span>: <span class="function"><span class="params">()</span> =&gt;</span> request.get(<span class="string">'/xml/slide/slide.xml'</span>, <span class="literal">null</span>, &#123;</div><div class="line">    <span class="attr">baseURL</span>: baseUrlApi</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> api</div></pre></td></tr></table></figure></p>
+<p><code>stores/index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"><span class="keyword">import</span> xml2json <span class="keyword">from</span> <span class="string">'xmlstring2json'</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> api <span class="keyword">from</span> <span class="string">'@/utils/api'</span></div><div class="line"><span class="keyword">import</span> &#123; formatSlideList &#125; <span class="keyword">from</span> <span class="string">'@/utils'</span></div><div class="line"></div><div class="line">Vue.use(Vuex)</div><div class="line"></div><div class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  <span class="attr">state</span>: &#123;</div><div class="line">    <span class="attr">news</span>: []</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">mutations</span>: &#123;</div><div class="line">    news (state, data) &#123;</div><div class="line">      state.news = data</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">actions</span>: &#123;</div><div class="line">    <span class="keyword">async</span> getSlides (&#123; commit &#125;) &#123;</div><div class="line">      <span class="keyword">const</span> slides = <span class="keyword">await</span> api.getSlides()</div><div class="line">      <span class="keyword">if</span> (!slides) <span class="keyword">return</span></div><div class="line">      <span class="keyword">const</span> parsedSlides = xml2json(slides).rss.channel.item</div><div class="line">      <span class="keyword">const</span> filtedSlides = parsedSlides.filter(</div><div class="line">        <span class="function"><span class="params">slide</span> =&gt;</span> slide.opentype[<span class="string">'#text'</span>] === <span class="string">'1'</span></div><div class="line">      )</div><div class="line">      <span class="keyword">const</span> formatedSlides = filtedSlides.map(formatSlideList)</div><div class="line">      commit(<span class="string">'slides'</span>, formatedSlides)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> store</div></pre></td></tr></table></figure>
+<p> 修改<code>package.json</code>中的依赖配置<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="string">"dependencies"</span>: &#123;</div><div class="line">  <span class="string">"flyio"</span>: <span class="string">"^0.5.9"</span>,</div><div class="line">  <span class="string">"mpvue"</span>: <span class="string">"^1.0.12"</span>,</div><div class="line">  <span class="string">"mpvue-router-patch"</span>: <span class="string">"^0.2.1"</span>,</div><div class="line">  <span class="string">"vuex"</span>: <span class="string">"^3.0.1"</span>,</div><div class="line">  <span class="string">"xmlstring2json"</span>: <span class="string">"^0.1.9"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p> 项目代码目录执行<code>npm install</code></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/24/ffmpeg-nginx-rtmp-module-Nodejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mi Xiu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="米修's Tech">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/24/ffmpeg-nginx-rtmp-module-Nodejs/" itemprop="url">
+                  ffmpeg nginx rtmp module
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-24 16:04:26" itemprop="dateCreated datePublished" datetime="2018-08-24T16:04:26+08:00">2018-08-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-25 01:15:16" itemprop="dateModified" datetime="2018-08-25T01:15:16+08:00">2018-08-25</time>
               
             
           </span>
@@ -1273,454 +1954,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/微信小程序抓包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mi Xiu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="米修's Tech">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/14/微信小程序抓包/" itemprop="url">
-                  微信小程序抓包
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-14 12:21:35 / 修改时间：12:28:18" itemprop="dateCreated datePublished" datetime="2018-08-14T12:21:35+08:00">2018-08-14</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>最近考虑开发一款小程序，看到别人做的比较好的小程序就想模仿，于是想要抓取别人的接口</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>macOS<br>Charles 4.0</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul>
-<li>菜单 -&gt; Proxy -&gt; SSL Proxying Settings… -&gt; 勾选Enable SSL Proxying -&gt; 点击Add -&gt; 填入 * 抓所有域名<br><img src="https://user-images.githubusercontent.com/8413791/34810238-03f72f70-f6d5-11e7-99b2-32871f6a4b46.png" alt=""></li>
-</ul>
-<ul>
-<li>菜单 -&gt; Help -&gt; SSL Proxying<br><img src="https://user-images.githubusercontent.com/8413791/34810057-1e342902-f6d4-11e7-9619-fa51675bba08.png" alt=""></li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/8413791/34810106-578105a4-f6d4-11e7-80a8-a95be83bb0ea.png" alt=""></p>
-<p>确保手机和电脑处于同一个局域网下，并在手机上设置代理 IP 和 端口（你电脑的局域网 IP 和抓包工具设置的端口，通常为 8080 或者 8888 也可以自己设置）</p>
-<p>手机访问 chls.pro/ssl 地址，下载和安装抓包工具的 CA 证书。</p>
-<p><strong> 部分 iOS 系统需要在：设置 -&gt; 通用 -&gt; 关于本机 -&gt; 证书信任设置 -&gt; 启用完全信任Charles证书 </strong>  (我的测试机iPhone5 就卡在了这里很久，有的https能够抓取，有的不行，最后才找到这一点，Done ^_^)</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/05/zsh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mi Xiu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="米修's Tech">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/05/zsh/" itemprop="url">
-                  zsh
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-05-05 21:24:36 / 修改时间：21:26:53" itemprop="dateCreated datePublished" datetime="2017-05-05T21:24:36+08:00">2017-05-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>zsh的配置主要集中在用户当前目录的.zshrc(~/.zshrc)里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">vim ~/.zshrc</div><div class="line"></div><div class="line"></div><div class="line">$ #配置别名，例如：</div><div class="line"></div><div class="line">$ alias cls=&quot;clear&quot;</div><div class="line"></div><div class="line">$ alias ll=&quot;ls -l&quot;</div><div class="line"></div><div class="line">$ alias vi=&quot;vim&quot;</div><div class="line"></div><div class="line">$ #配置主题</div><div class="line"></div><div class="line">$ #在.zshrc里找到ZSH_THEME</div><div class="line"></div><div class="line">$ #将默认的ZSH_THEME=&quot;robbyrussell&quot;修改为</div><div class="line"></div><div class="line">$ ZSH_THEME=&quot;agnoster&quot;</div></pre></td></tr></table></figure></p>
-<p>修改完配置文件最为关键的一步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ source ~/.zshrc #每次修改完了.zshrc文件,必须执行这个命令</div></pre></td></tr></table></figure></p>
-<p>参考:<a href="http://www.jianshu.com/p/e45160d0ae27" target="_blank" rel="external">http://www.jianshu.com/p/e45160d0ae27</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mi Xiu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="米修's Tech">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/05/Multiple-Targets-common-files-in-Xcode-8/" itemprop="url">
-                  Multiple Targets common files in Xcode 8
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-05-05 21:05:16" itemprop="dateCreated datePublished" datetime="2017-05-05T21:05:16+08:00">2017-05-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-08-13 01:24:42" itemprop="dateModified" datetime="2018-08-13T01:24:42+08:00">2018-08-13</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天正式开始了SiuNimTao的开发，考虑将 iOS/macOS 合为一个工程项目，用到了多target，问题来了，我新建一个类时，默认的只加到了首次见的macOS target下，iOS Target则需要手动在target-&gt;buile phase-&gt;Complie Sources中增加才可以编译通过，目前想到的还有在另一个项目中实现公共部分，一次Adding Files加入这个SiuNimTao项目，选中两个Targets即可，其中还有一个过时的Xcode plugin ，有空研究一下。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1761,7 +2001,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
